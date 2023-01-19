@@ -1,0 +1,7 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2%;
+    text-align: center;
+    background-size: cover;
+}
