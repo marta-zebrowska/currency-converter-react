@@ -1,4 +1,8 @@
 import "./style.css";
+import { currencies } from "../currencies";
+import { useState } from "react";
+
+
 
 const Form = (props) => (
     <form className="form">
