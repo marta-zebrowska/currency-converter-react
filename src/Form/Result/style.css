@@ -1,9 +1,7 @@
-.result__paragraph {
-    border: solid;
+.result {
+    font-size: 20px;
     padding: 10px;
-    font-weight: 700;
-    font-size: 24px;
-    border: 1px solid #aaa;
-    background-color: white;
-    border-radius: 10px;
+    margin-left: 5px;
+    color: #39206b;
+    text-align: center;
 }
