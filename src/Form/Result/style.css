@@ -1,5 +1,9 @@
 .result__paragraph {
-    padding-top: 40px;
+    border: solid;
+    padding: 10px;
     font-weight: 700;
     font-size: 24px;
+    border: 1px solid #aaa;
+    background-color: white;
+    border-radius: 10px;
 }

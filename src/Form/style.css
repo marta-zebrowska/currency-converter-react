@@ -1,11 +1,16 @@
 .form__fieldset {
     border-radius: 10px;
     padding: 10px;
+    background-color: white;
+    border: 1px solid #aaa;
 }
 
 .form__legend {
-    padding: 10px;
+    background-color: #381540;
+    color: white;
+    padding: 20px;
     font-weight: bold;
+    border-radius: 10px;
 }
 
 .form__labelText {
@@ -34,9 +39,9 @@
 }
 
 .form__button:hover {
-    background-color: hsl(289, 52%, 35%);
+    background-color: hsl(289, 85%, 20%);
 }
 
 .form__button:active {
-    background-color: hsl(289, 52%, 50%);
+    background-color: hsl(289, 85%, 25%);
 }
