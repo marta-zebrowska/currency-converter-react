@@ -48,6 +48,7 @@ export const Form = () => {
             {" "}
             <span className="form__labelText">Waluta:</span>
             <select
+              className="form__field"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
