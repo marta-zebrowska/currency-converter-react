@@ -1,6 +1,6 @@
 # Currency-Converter-React
 
-![How to use](public/images/chrome-capture-2023-0-28.gif)
+![How to use](public/images/presentation.gif)
 
 ## Demo
 
