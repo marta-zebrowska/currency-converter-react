@@ -1,5 +1,5 @@
 import Container from "./Container";
-import { Form } from "./Form";
+import Form from "./Form";
 import Footer from "./Footer";
 
 function App() {
