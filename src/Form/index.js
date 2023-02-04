@@ -1,10 +1,11 @@
-import "./style.css";
 import { currencies } from "../currencies";
 import { useState } from "react";
 import { Result } from "./Result";
 import { Clock } from "./Clock";
+import { StyledFieldset, Legend, Label, Field, StyledButton } from "./styled";
 
-export const Form = () => {
+
+const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
   const [result, setResult] = useState("");
@@ -25,16 +26,15 @@ export const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Kalkulator walut</legend>
+    <form onSubmit={onFormSubmit}>
+      <StyledFieldset>
+        <Legend>Kalkulator walut</Legend>
         <Clock />
         <p>
           <label>
             {" "}
-            <span className="form__labelText">Kwota:</span>
-            <input
-              className="form__field"
+            <Label>Kwota:</Label>
+            <Field
               value={amount}
               onChange={({ target }) => setAmount(target.value)}
               required
@@ -49,8 +49,8 @@ export const Form = () => {
           <label>
             {" "}
             <span className="form__labelText">Waluta:</span>
-            <select
-              className="form__field"
+            <Field
+              as select
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
@@ -59,16 +59,14 @@ export const Form = () => {
                   {currency.short}
                 </option>
               ))}
-            </select>
+            </Field>
           </label>
         </p>
-      </fieldset>
-      <p>
-        <button className="form__button" type="submit">
-          Przelicz
-        </button>
-      </p>
+      </StyledFieldset>    
+      <StyledButton>Przelicz</StyledButton>
       <Result result={result} />
     </form>
   );
 };
+
+export default Form;
