@@ -1,10 +1,10 @@
-import "./style.css";
+import { StyledFooter } from "./styled";
 
 const Footer = (props) => (
-    <footer className="footer">
+    <StyledFooter>
       <p>Kurs z dnia 24.01.2023.
       </p>
-      </footer>
+      </StyledFooter>
 );
 
 export default Footer;
