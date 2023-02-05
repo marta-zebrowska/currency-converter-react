@@ -50,7 +50,7 @@ const Form = () => {
             {" "}
             <span className="form__labelText">Waluta:</span>
             <Field
-              as select
+              as="select"
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
