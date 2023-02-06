@@ -48,7 +48,7 @@ const Form = () => {
         <p>
           <label>
             {" "}
-            <span className="form__labelText">Waluta:</span>
+            <Label>Waluta:</Label>
             <Field
               as="select"
               value={currency}
