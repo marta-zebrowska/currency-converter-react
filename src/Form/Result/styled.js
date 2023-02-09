@@ -4,6 +4,6 @@ export const StyledResult = styled.div`
     font-size: 20px;
     padding: 10px;
     margin-left: 5px;
-    color: #39206b;
+    color: ${({ theme }) => theme.color.deepKoamaru};
     text-align: center;
 `;
