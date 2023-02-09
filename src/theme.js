@@ -1,8 +1,9 @@
 export const theme = {
     color: {
         deepKoamaru: "#39206b",
-        musselWhite: "#f0e2de",
-        black: "#aaa",
+        musselWhite: "#F7F7F9",
+        pastelGray: "#c4c6d4",
+        black: "#000",
         deepMauve: "#dc83dc",
       },
     breakpoint: {
