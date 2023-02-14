@@ -14,7 +14,7 @@ export const useRates = () => {
         );
 
         setRates({
-          state: "working",
+          state: "success",
           rates: response.data.rates,
           date: response.data.date,
         });
