@@ -9,7 +9,7 @@
 
 ## Description
 
-This is currency exchange web calculator that converts PLN to other currencies such as EUR, USD, CHF or GBP.
+This is currency exchange web calculator that converts PLN to other currencies.
 The application was created with the use of my current knowledge :)
 
 ### Technologies used
@@ -23,6 +23,11 @@ The application was created with the use of my current knowledge :)
 - Git
 - Immutability
 - Npm and webpack
+- Axios
+- Downloading data from API
+- Promise, async/await
+- Error handling
+
 
 # Getting Started with Create React App
 
