@@ -2,20 +2,20 @@ import { currencies } from "../currencies";
 import { useState } from "react";
 import { Result } from "./Result";
 import { Clock } from "./Clock";
-import { StyledFieldset, Legend, Label, Field, StyledButton } from "./styled";
-
+import { StyledFieldset, Legend, Label, Field, StyledButton, Loading, StyledError, Info } from "./styled";
 
 const Form = () => {
   const [amount, setAmount] = useState("");
   const [currency, setCurrency] = useState(currencies[0].short);
   const [result, setResult] = useState("");
+  const ratesData = useRatesData();
 
   const calculateResult = (amount, currency) => {
-    const { rate } = currencies.find(({ short }) => short === currency);
+    const rate = ratesData.rates[currency];
 
     setResult({
-      sourceAmount: +amount,
-      targetAmount: amount / rate,
+      amount: +amount,
+      resultValue: amount * rate,
       currency,
     });
   };
@@ -27,6 +27,21 @@ const Form = () => {
 
   return (
     <form onSubmit={onFormSubmit}>
+      {ratesData.state === "loading"
+                ? (
+                    <Loading>
+                        Uno momento por favor... <br /> Właśnie ładuję kursy z Europejskiego Banku Centralnego...
+                    </Loading>
+                )
+                :
+                ratesData.state === "error" ? (
+                    <StyledError>
+                        Ups... coś poszło nie tak 😐 <br />
+                        Sprawdź czy masz połączenie z internetem i odśwież stronę przeglądarki. <br />
+                        Jeśli to nie pomoże, postaramy się jak najszybciej naprawić błąd.
+                   </StyledError>
+                ) : (
+                  <>
       <StyledFieldset>
         <Legend>Kalkulator walut</Legend>
         <Clock />
@@ -54,9 +69,11 @@ const Form = () => {
               value={currency}
               onChange={({ target }) => setCurrency(target.value)}
             >
-              {currencies.map((currency) => (
-                <option key={currency.short} value={currency.short}>
-                  {currency.short}
+              {Object.keys(ratesData.rates).map((currency) => (
+                <option 
+                 key={currency} 
+                 value={currency}>
+                 {currency}
                 </option>
               ))}
             </Field>
@@ -65,6 +82,12 @@ const Form = () => {
       </StyledFieldset>    
       <StyledButton>Przelicz</StyledButton>
       <Result result={result} />
+      <Info>
+                            Kursy walut aktualne na dzień: {ratesData.date}
+                        </Info>
+                    </>
+                )
+                }
     </form>
   );
 };
