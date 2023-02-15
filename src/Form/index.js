@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Result } from "./Result";
 import { Clock } from "./Clock";
 import { StyledFieldset, Legend, Label, Field, StyledButton, Loading, StyledError, Info } from "./styled";
+import { useRatesData } from "./useRatesData";
 
 const Form = () => {
   const [amount, setAmount] = useState("");
