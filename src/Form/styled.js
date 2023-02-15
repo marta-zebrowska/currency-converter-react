@@ -49,3 +49,18 @@ export const StyledButton = styled.button`
     filter: brightness(140%);
   }
 `;
+
+export const Loading = styled.p`
+  color: ${({ theme }) => theme.color.deepKoamaru};
+  text-align: center;
+`;
+
+export const StyledError = styled.p`
+  color: ${({ theme }) => theme.color.crimson};
+  text-align: center;
+`;
+
+export const Info = styled.p`
+  color: ${({ theme }) => theme.color.deepKoamaru};
+  text-align: center;
+`;
