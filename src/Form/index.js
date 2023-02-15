@@ -1,4 +1,3 @@
-import { currencies } from "../currencies";
 import { useState } from "react";
 import { Result } from "./Result";
 import { Clock } from "./Clock";
@@ -16,7 +15,7 @@ import { useRatesData } from "./useRatesData";
 
 const Form = () => {
   const [amount, setAmount] = useState("");
-  const [currency, setCurrency] = useState(currencies[0].short);
+  const [currency, setCurrency] = useState("EUR");
   const [result, setResult] = useState("");
   const ratesData = useRatesData();
 
@@ -89,7 +88,7 @@ const Form = () => {
           </StyledFieldset>
           <StyledButton>Przelicz</StyledButton>
           <Result result={result} />
-          <Info>Kursy walut aktualne na dzień: {ratesData.date}</Info>
+          <Info>Kursy walut pobierane są z Europejskiego Banku Centralnego.<br />Aktualne na dzień: {ratesData.date}</Info>
         </>
       )}
     </form>
