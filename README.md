@@ -9,7 +9,7 @@
 
 ## Description
 
-This is currency exchange web calculator that converts PLN to other currencies.
+This is currency exchange web calculator that converts PLN to other currencies. Current exchange rates are downloaded from the European Central Bank from https://exchangerate.host/
 The application was created with the use of my current knowledge :)
 
 ### Technologies used
